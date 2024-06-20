@@ -1,60 +1,457 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+:root{
+    font-size: 16px;
+    --fonts: Montserrat, sans-serif;
+    --light-gray: #eaeaea;
+    --med-gray: #555;
+    --white: #fff;
+    --dune: #363432;
+    --pewter: #90A19D;
+    --carrot-orange: #F0941F;
+    --flamingo: #EF6024;
+    --small-shadow: -0.25rem 0.25rem 0.5rem var(--med-gray);
+    --filter-shadow: drop-shadow(-0.5rem 0.5rem 0.5rem var(--med-gray));
 }
-
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-.navbar {
+  
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
     overflow: hidden;
-    background-color: #333;
 }
-
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.container {
-    padding: 20px;
-}
-
-#map {
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.cafe-img {
-    width: 100%;
-    max-width: 300px;
+   
+#skip:focus {
+    position: static;
+    width: auto;
     height: auto;
 }
 
-figcaption {
-    text-align: center;
-    font-style: italic;
-    margin-top: -10px;
-    margin-bottom: 10px;
+
+body {
+    font-family: var(--fonts);
+    color: var(--dune);
+    line-height: 1.35;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
 }
+  
+header {
+    background-color: #FDF8ED;
+    color: var(--white);
+    padding: 1rem;
+    width: calc(100% - 2rem);
+}
+  
+header div {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    align-items: center;
+}
+  
+.logo {
+    padding: 5px;
+}
+
+  
+h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+  
+h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-top: 0.25rem solid var(--carrot-orange);
+    border-bottom: 0.25rem solid var(--carrot-orange);
+}
+  
+h3 {
+    font-size: 1.15rem;
+    margin: 0.5rem 0;
+}
+  
+h2, h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+  
+nav {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+  
+nav a {
+    text-decoration:none;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #924704;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+}
+
+nav li {
+    list-style:none;
+}
+  
+  
+a {
+    display: block;
+    padding: 1rem;
+}
+  
+  
+img {
+    display: block;
+    margin: 0 auto;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.25rem;
+}
+
+.parallax {
+    background-image: url("Images/koffeegeeksbeans.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+em {
+    font-style: italic;
+}
+  
+p {
+    line-height: 1.35;
+    max-width: 75ch;
+    padding: 0.5rem 0;
+    margin: 0 auto;
+}
+  
+main {
+    width: calc(100% - 2rem);
+    max-width: 1100px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+  
+main section {
+    margin: 1rem auto;
+}
+  
+  
+#welcome h2 {
+    margin-bottom: 0;
+}
+  
+#welcome img {
+    width: 100%;
+}
+  
+  
+#menu section {
+    max-width: 350px;
+    margin: 0 auto 3rem auto;
+}
+  
+#menu h3 {
+    padding: 0.5rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    background-color: var(--dune);
+    color: var(--white);
+    margin-bottom: 0;
+}
+  
+#menu img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+  
+#menu p {
+    padding: 1rem;
+    background-color: var(--dune);
+    color: var(--white);
+    border-radius: 0 0 0.25rem 0.25rem;
+}
+  
+#menu a {
+    background-color: var(--flamingo);
+    color: var(--white);
+    width: fit-content;
+    text-decoration: none;
+    margin: 0.5rem auto;
+    border-radius: 0.25rem;
+    box-shadow: var(--box-shadow);
+    font-weight: bold;
+}
+  
+  
+#about {
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+  
+#about h2, #about p {
+    padding:0;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+  
+#about img {
+    display: block;
+    width: 75%;
+    max-width: 150px;
+    margin: 0 auto;
+    box-shadow: none;
+    filter: var(--filter-shadow);
+}
+  
+
+footer {
+    background-color: #FDF8ED;
+    color: #924704;
+    padding: 2rem 1rem 1rem 1rem;
+    line-height: 2;
+}
+  
+footer section {
+    max-width: 300px;
+    margin: 2rem auto 1rem auto;
+}
+    
+footer section:last-of-type { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    justify-items: center;
+}
+  
+footer h2 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    border-top: none;
+    border-bottom: none;
+}
+  
+footer img {
+    display: block;
+    width: 100%;
+    max-width: 50px;
+    margin: 0 auto;
+}
+  
+footer span {
+    display: block;
+    padding: 0.25rem 0;
+}
+  
+footer a {
+    padding: 0.5rem 0;
+    color: #924704;
+}
+  
+footer p {
+    font-family: sans-serif;
+    text-align: center;
+}
+  
+.desktop {
+    display: none;
+}
+  
+@media (hover:hover){
+    
+    nav a:hover{
+      background-color: var(--carrot-orange);
+      color: var(--white);
+    }
+    
+    header svg:hover{
+      fill: var(--carrot-orange);
+    }
+    
+    footer a:hover{
+      color: var(--carrot-orange);
+    }
+    
+    footer svg:hover{
+      stroke: var(--carrot-orange);
+    }
+}
+  
+
+@media screen and (min-width: 500px) {
+    header div{  
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    h1{
+      text-align: left;
+      font-size: 3rem;
+    }
+    
+    nav ul{  
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: .5rem;
+    }
+}
+  
+
+  @media screen and (min-width: 650px){
+    h1{
+      margin-left: 3rem;
+    }
+    
+    #welcome img{
+      margin-bottom: 3rem;
+    }
+    
+    #menu{
+        display: grid;
+        grid-template-columns: 1fr, 1fr, 1fr;
+        gap: .5rem; 
+    }
+    
+    #menu h2{ 
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+    
+    #menu section{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: var(--dune);
+      border-radius: 0.25rem;
+      box-shadow: var(--box-shadow);
+      padding-bottom: 1rem;
+      margin-bottom: 0;
+    }
+    
+    #menu a{
+      box-shadow: none;
+     }
+    
+    #about{ 
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    #about p:first-of-type{ 
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    
+    #about p:last-of-type{ 
+      grid-column: 3 / 5;
+      
+    }
+    
+    footer div{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .mobile{
+      display: none;
+    }
+    
+    .desktop{
+      display: block;
+    }
+  }
+  
+  /* ----- MEDIUM SCREEN STYLES ----- */
+  @media screen and (min-width: 750px){
+    #welcome{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    #welcome h2, #welcome img{
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+    
+    #welcome img{
+      margin-bottom: 0;
+    }
+    
+    #menu { 
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* ----- LARGE SCREEN STYLES ----- */
+  @media screen and (min-width: 980px){
+    footer a, footer span{
+      padding: 0;
+    }
+    
+    .desktop{
+      display: block;
+    }
+    
+    .mobile{
+      display: none;
+    }
+  }
+  
+  /* ----- EXTRA LARGE SCREEN STYLES ----- */
+  @media screen and (min-width: 1250px){
+    header div{  
+      display: grid;
+      grid-template-columns: 1fr 3fr 3fr;
+      gap: 0rem;
+    }
+    
+    nav{  
+      grid-column: auto;
+    }
+    
+    nav ul {  
+      gap: 1rem;
+    }
+    
+    main > section{
+      margin-bottom: 3rem;
+    }
+    
+    main h2{
+      font-size: 2rem;
+    }
+    
+    p{
+      font-size: 1.15rem;
+    }
+  }
+
