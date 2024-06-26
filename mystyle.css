@@ -241,11 +241,20 @@ main section {
 #hours img.zoomed {
     transform: scale(1.5); 
 }
+
+.horizontal-hours {
+    display: inline-block;
+}
   
 #about h2, #about p {
     padding:0;
     grid-column-start: 1;
     grid-column-end: -1;
+}
+
+.horizontal-hours img, iframe {
+    vertical-align: top;
+    padding: 10px;
 }
 
 footer {
