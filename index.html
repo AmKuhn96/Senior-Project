@@ -7,6 +7,8 @@
     <title>KoffeeGeeks - Circleville, Ohio!</title>
 </head>
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
     <a href="#main-content" id="skip">Skip to Main Content</a>
     <header>
@@ -17,7 +19,7 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#menu">Menu</a></li>
-            <li><a href="#mobile">Mobile Order</a></li>
+            <li><a href="https://order.rezku.com/d5271c26-f846-4848-8c77-0c9934c9e07a">Mobile Order</a></li>
           </ul>
         </nav>
       </div>
@@ -25,40 +27,24 @@
     <main id="main-content">
         <div class="parallax"></div>
       <section id="welcome">
-        <h2>Welcome to KoffeeGeeks!</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita corporis repudiandae iure harum atque impedit debitis, provident beatae in accusamus magnam minus error eveniet voluptates nesciunt, sunt quaerat consequuntur? Suscipit.</p>
+        <h2>Welcome to KoffeeGeeks in Circleville!</h2>
+        <p>Owners, Mike & Jodi, are from Laurelville, Ohio, and wanted nothing more than to create the best small-batch roasted coffee possible for their communities.
+
+        </p>
+        <p>"Our dream was to offer excellent coffee to our customers, without it costing half your paycheck to get a good “cuppa joe”."</p>
+        <p>"We have a beautiful 3 acres and a place for our huge roaster, affectionately called “Rosie”, so we can bring an excellent quality product to you, our customer."</p>
       </section>
       <section id="menu">
         <h2>Our Daily Menu</h2>
-        <section>
-          <h3>Espresso Drinks</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita corporis repudiandae iure harum atque impedit debitis</p>
-          <a href="#">See more espresso</a>
-        </section>
-        <section>
-          <h3>Brewed Coffee</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita corporis repudiandae iure harum atque impedit debitis</p>
-          <a href="#">See more coffee</a>
-         </section>
-         <section>
-          <h3>Non-Coffee</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita corporis repudiandae iure harum atque impedit debitis</p>
-          <a href="#">See more non-coffee</a>
-         </section>
-         <section>
-          <h3>Energy Drinks</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita corporis repudiandae iure harum atque impedit debitis</p>
-          <a href="#">See more energy drinks</a>
-         </section>
-         <section>
-          <h3>Pastries</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita corporis repudiandae iure harum atque impedit debitis</p>
-          <a href="#">See more pastries</a>
-         </section>
+        <div class="menu-images">
+        <img src="Images/Menu1.png" alt="Coffee Shop Menu" onclick="zoomImage(this)">
+        <br>
+        <img src="Images/Menu2.png" alt="Coffee Shop Menu" onclick="zoomImage(this)">
+        </div>
       </section>
-      <section id="our-cafe">
-        <h2>Our Cafe</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam consequuntur animi, quo eaque magnam tempore officia vitae in corporis, explicabo alias architecto? Officiis, veritatis ab molestiae natus quis mollitia quasi.</p>
+      <section id="hours">
+        <h2>Hours & Location</h2>
+        <img src="Images/KoffeeGeeks Hours.png" alt="KoffeeGeeks Store Hours and Location" onclick="zoomImage(this)">
       </section>
     </main>
     <footer>
@@ -70,14 +56,38 @@
             <a href="mailto:email@email.com">sales@koffeegeeks.com</a>
           </address>
         </section>
-        <section>
+        <section class="facebook-section">
           <h2>Find Us on Facebook!</h2>
-          <a href="#" aria-label="Facebook Link"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-    </svg></a>
+          <a href="https://www.facebook.com/koffeegeeks" aria-label="Facebook Link"><svg xmlns="http://www.w3.org/2000/svg" class="facebook-link" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="blue" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+            </svg></a>
    
         </section>
        </div>
+
+    <script>
+         function zoomImage(image) {
+            image.classList.toggle('zoomed');
+        }
+
+            let mybutton = document.getElementById("myBtn");
+            window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
 </body>
 </html>
