@@ -35,7 +35,7 @@ body {
     font-family: "Josefin Sans";
     color: black;
     font-size: large;
-    background-color: #8C1C13;
+    background-color:#58151c;
     line-height: 1.35;
     box-sizing: border-box;
     margin:0;
@@ -94,7 +94,8 @@ h2, h3 {
     height: 1px;
     overflow: hidden;
 }
-  
+
+
 nav {
     margin-left: auto;
 }
@@ -325,10 +326,5 @@ footer p {
     background-color: #555; 
     color: white;
 }
-  
-.desktop {
-    display: none;
-}
-
   
 
