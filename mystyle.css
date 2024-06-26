@@ -46,7 +46,7 @@ header {
     background-color: #FEFFD2;
     color: var(--white);
     padding: 1rem;
-    width: calc(100% - 2rem);
+    
 }
   
 header div {
